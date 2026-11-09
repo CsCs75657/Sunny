@@ -1,0 +1,291 @@
+/* Gallery styles extracted from the original TemplateMo 595 CSS; scoped for Sunny Mancsland. */
+        /* Home Section with Coverflow */
+        .sunny-gallery .coverflow-wrapper {
+            width: 100%;
+
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 0;
+        }
+
+        .sunny-gallery .coverflow-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1200px;
+            position: relative;
+        }
+
+        .sunny-gallery .coverflow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-style: preserve-3d;
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .sunny-gallery .coverflow-item {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            user-select: none;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+
+        .sunny-gallery .coverflow-item .cover {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            background: #FFF1D6;
+        }
+
+        .sunny-gallery .coverflow-item .cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Reflection */
+        .sunny-gallery .coverflow-item .reflection {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            transform: scaleY(-1);
+            opacity: 0.2;
+            filter: blur(2px);
+            background: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 0) 0%, 
+                rgba(0, 0, 0, 0.8) 50%, 
+                rgba(0, 0, 0, 1) 100%);
+            overflow: hidden;
+        }
+
+        /* Active item (center) */
+        .sunny-gallery .coverflow-item.active {
+            z-index: 100;
+            transform: translateX(0) translateZ(0) rotateY(0deg);
+        }
+
+        .sunny-gallery .coverflow-item.active .cover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Navigation */
+        .sunny-gallery .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #603A20;
+            border: 2px solid #FFBD25;
+            color: #FFF8ED;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 200;
+        }
+
+        .sunny-gallery .nav-button:hover {
+            background: #FFBD25;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .sunny-gallery .nav-button.prev {
+            left: 50px;
+        }
+
+        .sunny-gallery .nav-button.next {
+            right: 50px;
+        }
+
+        /* Dots indicator */
+        .sunny-gallery .dots-container {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 200;
+        }
+
+        .sunny-gallery .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #D9B89C;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sunny-gallery .dot.active {
+            background: #FFBD25;
+            transform: scale(1.3);
+        }
+
+        /* Play/Pause Button */
+        .sunny-gallery .play-pause-button {
+            position: absolute;
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #603A20;
+            border: 2px solid #FFBD25;
+            color: #FFF8ED;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 200;
+        }
+
+        .sunny-gallery .play-pause-button:hover {
+            background: #FFBD25;
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .sunny-gallery .play-pause-button .pause-icon {
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+
+.sunny-gallery { background: #FFF8ED; padding: 55px 0; overflow: hidden; }
+.sunny-gallery .gallery-title { text-align: center; color: #603A20; margin-bottom: 10px; }
+.sunny-gallery .coverflow-container { overflow: hidden; }
+.sunny-gallery .coverflow-item .cover img { display: block; }
+.sunny-gallery .nav-button.prev { left: 20px; }
+.sunny-gallery .nav-button.next { right: 20px; }
+.sunny-gallery .dots-container { bottom: 20px; }
+.sunny-gallery .dot { border: 0; padding: 0; }
+.sunny-gallery .play-pause-button { bottom: 65px; }
+@media (max-width: 768px) {
+    .sunny-gallery .coverflow-wrapper { height: 390px; }
+    .sunny-gallery .coverflow { height: 260px; }
+    .sunny-gallery .coverflow-item { width: 200px; height: 200px; margin-left: -100px; margin-top: -100px; }
+    .sunny-gallery .nav-button { width: 40px; height: 40px; font-size: 18px; }
+    .sunny-gallery .nav-button.prev { left: 8px; }
+    .sunny-gallery .nav-button.next { right: 8px; }
+}
+@media (max-width: 480px) {
+    .sunny-gallery .coverflow-item { width: 180px; height: 180px; margin-left: -90px; margin-top: -90px; }
+}
+
+
+ 
+/* FULLSCREEN LIGHTBOX - ABOVE EVERYTHING */
+
+#sunnyLightbox {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+
+    background: rgba(0, 0, 0, 0.4) !important;
+    z-index: 2147483647 !important;
+
+    display: none !important;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+
+    cursor: zoom-out;
+}
+
+#sunnyLightbox.open {
+    display: flex !important;
+}
+
+#sunnyLightbox img {
+    display: block;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+
+    object-fit: contain !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    cursor: default;
+}
+
+.sunny-gallery .coverflow-item {
+    cursor: zoom-in;
+}
+
+
+/* SUNNY MANCSLAND FULLSCREEN LIGHTBOX */
+
+.sunny-lightbox {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    cursor: zoom-out;
+}
+
+.sunny-lightbox.open {
+    display: flex;
+}
+
+.sunny-lightbox img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+    cursor: default;
+}
+
+/* GALLERY IMAGES ARE CLICKABLE */
+
+.sunny-gallery .coverflow-item {
+    cursor: zoom-in;
+}
+

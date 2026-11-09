@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Tiya Golf Club - Free HTML CSS Template</title>
+        <title>Sunny Mancsland</title>
 
         <!-- CSS FILES -->                
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,8 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/templatemo-tiya-golf-club.css" rel="stylesheet">
-        
-<!--
-
-TemplateMo 587 Tiya Golf Club
-
-https://templatemo.com/tm-587-tiya-golf-club
-
--->
+        <link href="css/templatemo-3d-coverflow.css"  rel="stylesheet">
+        <script src="js/templatemo-3d-coverflow-scripts.js"></script>
     </head>
     
     <body>
@@ -54,23 +48,23 @@ https://templatemo.com/tm-587-tiya-golf-club
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                                <a class="nav-link click-scroll" href="#section_1">Kezdőlap</a>
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2">About</a>
+                                <a class="nav-link click-scroll" href="#section_2">Rólunk</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3">Membership</a>
+                                <a class="nav-link click-scroll" href="#section_3">Nyitvatartás</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4">Events</a>
+                                <a class="nav-link click-scroll" href="#section_4">Szabadnapjaink</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contact Us</a>
+                                <a class="nav-link click-scroll" href="#section_5">Kapcsolat</a>
                             </li>
 
                             <li class="nav-item dropdown">
@@ -169,9 +163,15 @@ https://templatemo.com/tm-587-tiya-golf-club
                                 </h1>
 
                             <div class="custom-btn-group">
-                                <a href="#section_2" class="btn custom-btn smoothscroll me-3">Our Story</a>
+                                <a href="#section_2"
+                                class="btn custom-btn smoothscroll me-3">
+                                Ismerj meg minket!
+                                </a>
 
-                                <a href="#section_3" class="link smoothscroll">Become a member</a>
+                                <a href="#section_3"
+                                class="link smoothscroll">
+                                Szolgáltatásaink
+                                </a>
                             </div>
                         </div>
 
@@ -193,7 +193,7 @@ https://templatemo.com/tm-587-tiya-golf-club
                     <div class="row">
 
                         <div class="col-lg-12 col-12 text-center">
-                            <h2 class="mb-lg-5 mb-4">About Tiya</h2>
+                            <h2 class="mb-lg-5 mb-4">Bemutatkozás</h2>
                         </div>
 
                         <div class="col-lg-5 col-12 me-auto mb-4 mb-lg-0">
@@ -269,25 +269,123 @@ https://templatemo.com/tm-587-tiya-golf-club
             </section>
 
 
+<!-- SUNNY MANCSLAND 3D GALLERY -->
+<section class="sunny-gallery" id="gallery">
+
+    <div class="container">
+        <h2 class="gallery-title">Galéria</h2>
+    </div>
+
+    <div class="coverflow-wrapper">
+        <div class="coverflow-container" tabindex="0"
+             aria-label="Sunny Mancsland képgaléria">
+
+            <div class="coverflow" id="coverflow">
+
+                <div class="coverflow-item" data-index="0">
+                    <div class="cover">
+                        <img src="images/gallery1.jpg"
+                             alt="Sunny Mancsland galéria 1">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+
+                <div class="coverflow-item" data-index="1">
+                    <div class="cover">
+                        <img src="images/gallery2.jpg"
+                             alt="Sunny Mancsland galéria 2">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+
+                <div class="coverflow-item" data-index="2">
+                    <div class="cover">
+                        <img src="images/gallery3.jpg"
+                             alt="Sunny Mancsland galéria 3">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+
+                <div class="coverflow-item" data-index="3">
+                    <div class="cover">
+                        <img src="images/gallery4.jpg"
+                             alt="Sunny Mancsland galéria 4">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+
+                <div class="coverflow-item" data-index="4">
+                    <div class="cover">
+                        <img src="images/gallery5.jpg"
+                             alt="Sunny Mancsland galéria 5">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+
+                <div class="coverflow-item" data-index="5">
+                    <div class="cover">
+                        <img src="images/gallery6.jpg"
+                             alt="Sunny Mancsland galéria 6">
+                    </div>
+                    <div class="reflection"></div>
+                </div>
+
+            </div>
+
+            <!-- Navigation arrows -->
+            <button class="nav-button prev" type="button"
+                    aria-label="Előző kép">
+                &#10094;
+            </button>
+
+            <button class="nav-button next" type="button"
+                    aria-label="Következő kép">
+                &#10095;
+            </button>
+
+            <!-- Navigation dots -->
+            <div class="dots-container" id="dots"></div>
+
+            <!-- Autoplay control -->
+            
+
+<!-- FULLSCREEN GALLERY PHOTO -->
+<div id="sunnyLightbox"
+     class="sunny-lightbox"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Nagyított fénykép"
+     aria-hidden="true"
+     hidden>
+
+    <img id="sunnyLightboxImage" src="" alt="">
+
+</div>
+
+
+</section>
+<!-- END SUNNY GALLERY -->
+
+
             <section class="section-bg-image">
                 <svg viewBox="0 0 1265 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(255, 255, 255, 1)" d="M 0 40 C 164 40 164 20 328 20 L 328 20 L 328 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(255, 255, 255, 1)" d="M 327 20 C 445.5 20 445.5 89 564 89 L 564 89 L 564 0 L 327 0 Z" stroke-width="0"></path> <path fill="rgba(255, 255, 255, 1)" d="M 563 89 C 724.5 89 724.5 48 886 48 L 886 48 L 886 0 L 563 0 Z" stroke-width="0"></path><path fill="rgba(255, 255, 255, 1)" d="M 885 48 C 1006.5 48 1006.5 67 1128 67 L 1128 67 L 1128 0 L 885 0 Z" stroke-width="0"></path><path fill="rgba(255, 255, 255, 1)" d="M 1127 67 C 1196 67 1196 0 1265 0 L 1265 0 L 1265 0 L 1127 0 Z" stroke-width="0"></path></svg>
 
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-6 col-12">
+                        <div class="col-lg-6 col-12 mx-auto">
                             <div class="section-bg-image-block">
-                                <h2 class="mb-lg-3">Get our newsletter</h2>
+                                <h2 class="mb-lg-3">Iratkozz fel hírlevelünkre!</h2>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore.</p>
+                                <p>Ne maradj le a legújabb hírekről, iratkozz fel hírlevelünkre!</p>
 
                                 <form action="#" method="get" class="custom-form mt-lg-4 mt-2" role="form">
                                     <div class="input-group input-group-lg">
                                         <span class="input-group-text bi-envelope" id="basic-addon1"></span>
 
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="E-mail cím" required="">
 
-                                        <button type="submit" class="form-control">Subscribe</button>
+                                        <button type="submit" class="form-control">Feliratkozás</button>
                                     </div>
                                 </form>
                             </div>
@@ -305,158 +403,85 @@ https://templatemo.com/tm-587-tiya-golf-club
                     <div class="row">
 
                         <div class="col-lg-12 col-12 text-center mx-auto mb-lg-5 mb-4">
-                            <h2><span>Membership</span> at Tiya</h2>
+                            <h2><span>Nyitvatartás</h2>
                         </div>
 
-                        <div class="col-lg-6 col-12 mb-3 mb-lg-0">
-                            <h4 class="mb-4 pb-lg-2">Membership Fees</h4>
+                        
+<div class="table-responsive">
+    <table class="table text-center sunny-calendar">
+        <thead>
+            <tr>
+                <th colspan="7">2026. november</th>
+            </tr>
+            <tr>
+                <th>Hétfő</th>
+                <th>Kedd</th>
+                <th>Szerda</th>
+                <th>Csütörtök</th>
+                <th>Péntek</th>
+                <th>Szombat</th>
+                <th>Vasárnap</th>
+            </tr>
+        </thead>
 
-                            <div class="table-responsive">
-                                <table class="table text-center">
-                                    <thead>
-                                        <tr>
-                                            <th style="width: 34%;">Yearly Access</th>
-                                            
-                                            <th style="width: 22%;">T1 $420</th>
-                                            
-                                            <th style="width: 22%;">T2 $640</th>
-                                            
-                                            <th style="width: 22%;">T3 $860</th>
-                                        </tr>
-                                    </thead>
+        <tbody>
+            <tr>
+                <td colspan="6"></td>
+                <td>1<br><span>–</span></td>
+            </tr>
 
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row" class="text-start">Golf Insurance</th>
-                                            
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-                                            
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-                                            
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-                                        </tr>
+            <tr>
+                <td>2<br><i class="bi-x-circle-fill"></i></td>
+                <td>3<br><i class="bi-x-circle-fill"></i></td>
+                <td>4<br><i class="bi-check-circle-fill"></i></td>
+                <td>5<br><i class="bi-x-circle-fill"></i></td>
+                <td>6<br><i class="bi-check-circle-fill"></i></td>
+                <td>7<br><i class="bi-x-circle-fill"></i></td>
+                <td>8<br><i class="bi-x-circle-fill"></i></td>
+            </tr>
 
-                                        <tr>
-                                            <th scope="row" class="text-start">Club Facilities</th>
+            <tr>
+                <td>9<br><i class="bi-check-circle-fill"></i></td>
+                <td>10<br><i class="bi-x-circle-fill"></i></td>
+                <td>11<br><i class="bi-check-circle-fill"></i></td>
+                <td>12<br><i class="bi-x-circle-fill"></i></td>
+                <td>13<br><i class="bi-check-circle-fill"></i></td>
+                <td>14<br><i class="bi-x-circle-fill"></i></td>
+                <td>15<br><i class="bi-x-circle-fill"></i></td>
+            </tr>
 
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
+            <tr>
+                <td>16<br><i class="bi-check-circle-fill"></i></td>
+                <td>17<br><i class="bi-x-circle-fill"></i></td>
+                <td>18<br><i class="bi-check-circle-fill"></i></td>
+                <td>19<br><i class="bi-x-circle-fill"></i></td>
+                <td>20<br><i class="bi-check-circle-fill"></i></td>
+                <td>21<br><i class="bi-x-circle-fill"></i></td>
+                <td>22<br><i class="bi-x-circle-fill"></i></td>
+            </tr>
 
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
+            <tr>
+                <td>23<br><i class="bi-check-circle-fill"></i></td>
+                <td>24<br><i class="bi-x-circle-fill"></i></td>
+                <td>25<br><i class="bi-check-circle-fill"></i></td>
+                <td>26<br><i class="bi-x-circle-fill"></i></td>
+                <td>27<br><i class="bi-check-circle-fill"></i></td>
+                <td>28<br><i class="bi-x-circle-fill"></i></td>
+                <td>29<br><i class="bi-x-circle-fill"></i></td>
+            </tr>
 
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope="row" class="text-start">Country Club</th>
-
-                                            <td>
-                                                <i class="bi-x-circle-fill"></i>
-                                            </td>
-
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope="row" class="text-start">Weekend Seasonal</th>
-
-                                            <td>
-                                                <i class="bi-x-circle-fill"></i>
-                                            </td>
-
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <th scope="row" class="text-start">Premium Courses</th>
-
-                                            <td>
-                                                <i class="bi-x-circle-fill"></i>
-                                            </td>
-
-                                            <td>
-                                                <i class="bi-x-circle-fill"></i>
-                                            </td>
-
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <th scope="row" class="text-start">Pro's Networking</th>
-
-                                            <td>
-                                                <i class="bi-x-circle-fill"></i>
-                                            </td>
-
-                                            <td>
-                                                <i class="bi-x-circle-fill"></i>
-                                            </td>
-
-                                            <td>
-                                                <i class="bi-check-circle-fill"></i>
-                                            </td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-12 mx-auto">
-                        <h4 class="mb-4 pb-lg-2">Please join us!</h4>
-                            <form action="#" method="post" class="custom-form membership-form shadow-lg" role="form">
-                                <h4 class="text-white mb-4">Become a member</h4>
-
-                                    <div class="form-floating">
-                                        <input type="text" name="full-name" id="full-name" class="form-control" placeholder="Full Name" required="">
-                                        
-                                        <label for="floatingInput">Full Name</label>
-                                    </div>
-
-                                    <div class="form-floating">
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
-                                        
-                                        <label for="floatingInput">Email address</label>
-                                    </div>
-
-                                    <div class="form-floating">
-                                        <textarea class="form-control" id="message" name="message" placeholder="Describe message here"></textarea>
-                                        
-                                        <label for="floatingTextarea"> Comments</label>
-                                    </div>
-
-                                    <button type="submit" class="form-control">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
+            <tr>
+                <td>30<br><i class="bi-check-circle-fill"></i></td>
+                <td>Dec. 1<br><i class="bi-x-circle-fill"></i></td>
+                <td>Dec. 2<br><i class="bi-check-circle-fill"></i></td>
+                <td>Dec. 3<br><i class="bi-x-circle-fill"></i></td>
+                <td>Dec. 4<br><i class="bi-check-circle-fill"></i></td>
+                <td>Dec. 5<br><i class="bi-x-circle-fill"></i></td>
+                <td>Dec. 6<br><i class="bi-x-circle-fill"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
             </section>
 
 
@@ -465,7 +490,7 @@ https://templatemo.com/tm-587-tiya-golf-club
                     <div class="row">
 
                         <div class="col-lg-12 col-12">
-                            <h2 class="mb-lg-3">Upcoming Events</h2>
+                            <h2 class="mb-lg-3">Szabadnapjaink</h2>
                         </div>
 
                         <div class="row custom-block mb-3">
@@ -577,14 +602,14 @@ https://templatemo.com/tm-587-tiya-golf-club
 
                         <div class="col-lg-5 col-12">
                             <form action="#" method="post" class="custom-form contact-form" role="form">
-                                <h2 class="mb-4 pb-2">Contact Tiya</h2>
+                                <h2 class="mb-4 pb-2">Kapcsolat</h2>
 
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-floating">
                                             <input type="text" name="full-name" id="full-name" class="form-control" placeholder="Full Name" required="">
                                             
-                                            <label for="floatingInput">Full Name</label>
+                                            <label for="floatingInput">Teljes név</label>
                                         </div>
                                     </div>
 
@@ -592,7 +617,7 @@ https://templatemo.com/tm-587-tiya-golf-club
                                         <div class="form-floating">
                                             <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
                                             
-                                            <label for="floatingInput">Email address</label>
+                                            <label for="floatingInput">E-mail cím</label>
                                         </div>
                                     </div>
 
@@ -600,10 +625,10 @@ https://templatemo.com/tm-587-tiya-golf-club
                                         <div class="form-floating">
                                             <textarea class="form-control" id="message" name="message" placeholder="Describe message here"></textarea>
                                             
-                                            <label for="floatingTextarea">Message</label>
+                                            <label for="floatingTextarea">Üzenet</label>
                                         </div>
 
-                                        <button type="submit" class="form-control">Submit Form</button>
+                                        <button type="submit" class="form-control">Beküldés</button>
                                     </div>
                                 </div>
                             </form>
@@ -613,24 +638,24 @@ https://templatemo.com/tm-587-tiya-golf-club
                             <div class="contact-info mt-5">
                                 <div class="contact-info-item">
                                     <div class="contact-info-body">
-                                        <strong>London, United Kingdom</strong>
+                                        <strong>Budapest, Magyarország</strong>
 
                                         <p class="mt-2 mb-1">
-                                            <a href="tel: 010-020-0340" class="contact-link">
-                                                (020) 
-                                                010-020-0340
+                                            <a href="tel: 708031932" class="contact-link">
+                                                (70) 
+                                                803-1932
                                             </a>
                                         </p>
 
                                         <p class="mb-0">
-                                            <a href="mailto:info@company.com" class="contact-link">
-                                                info@company.com
+                                            <a href="peti.mancsland@gmail.com" class="contact-link">
+                                                peti.mancsland@gmail.com
                                             </a>
                                         </p>
                                     </div>
 
                                     <div class="contact-info-footer">
-                                        <a href="#">Directions</a>
+                                        <a href="https://maps.app.goo.gl/H6kPpfwFu8ZNAG7y5">Útvonalterv</a>
                                     </div>
                                 </div>
 
@@ -641,6 +666,102 @@ https://templatemo.com/tm-587-tiya-golf-club
                     </div>
                 </div>
             </section>
+
+            <!-- SUNNY MANCSLAND GOOGLE MAPS -->
+<section class="sunny-map-section" id="location">
+    <div class="container">
+
+        <h2 class="text-center mb-3">
+            Hol találsz minket?
+        </h2>
+
+        <p class="text-center mb-4">
+            Nézd meg, hol található a Sunny Mancsland!
+        </p>
+
+        <div class="sunny-map-container">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2565.8281003900925!2d19.096269!3d47.423804000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDfCsDI1JzI1LjciTiAxOcKwMDUnNDYuNiJF!5e1!3m2!1shu!2shu!4v1794251630456!5m2!1shu!2shu"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Sunny Mancsland - Google Maps">
+            </iframe>
+
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=47.423804%2C19.096269"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="sunny-map-button">
+
+                <i class="bi bi-geo-alt-fill"></i>
+                Útvonaltervezés
+
+            </a>
+        </div>
+
+    </div>
+</section>
+<!-- END GOOGLE MAPS -->
+
+
+
+<!-- SUNNY MANCSLAND FACEBOOK SECTION -->
+<section class="sunny-facebook-section" id="facebook">
+    <div class="container">
+
+        <h2 class="text-center mb-5">
+            Kövess minket Facebookon!
+        </h2>
+
+        <div class="sunny-facebook-card">
+
+            <div class="sunny-facebook-card-header">
+
+                <img
+                    src="images/logo.png"
+                    alt="Sunny Mancsland logó"
+                    class="sunny-facebook-logo">
+
+                <h3>Sunny Mancsland</h3>
+                <p>Kuty anapközi • Budapest</p>
+
+            </div>
+
+            <div class="sunny-facebook-card-body">
+
+                <p>
+                    Kukkants be a Sunny Mancsland
+                    mindennapjaiba! Vidám kutyusok,
+                    közös játékok és friss hírek várnak.
+                </p>
+
+                <a
+                    href="https://www.facebook.com/share/1J4YUNDYiv/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="sunny-facebook-card-button">
+
+                    <i class="bi bi-facebook"></i>
+                    Facebook-oldal megtekintése
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- END FACEBOOK SECTION -->
+
+
         </main>
 
         <footer class="site-footer">
@@ -651,41 +772,14 @@ https://templatemo.com/tm-587-tiya-golf-club
                         <a class="navbar-brand d-flex align-items-center" href="index.html">
                             <img src="images/logo.png" class="navbar-brand-image img-fluid" alt="">
                             <span class="navbar-brand-text">
-                                Tiya
-                                <small>Golf Club</small>
+                                SUNNY
+                                <small>Mancsland</small>
                             </span>
                         </a>
                     </div>
 
-                    <div class="col-lg-3 col-12">
-                        <h5 class="site-footer-title mb-4">Join Us</h5>
-
-                        <p class="d-flex border-bottom pb-3 mb-3 me-lg-3">
-                            <span>Mon-Fri</span>
-                            6:00 AM - 6:00 PM
-                        </p>
-
-                        <p class="d-flex me-lg-3">
-                            <span>Sat-Sun</span>
-                            6:30 AM - 8:30 PM
-                        </p>
-                        <br>
-                    </div>
-
                         <div class="col-lg-2 col-12 ms-auto">
-                            <ul class="social-icon mt-lg-5 mt-3 mb-4">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                </li>
-                            </ul>
+                    
                             <p class="copyright-text">Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
                             
                         </div>
@@ -693,7 +787,7 @@ https://templatemo.com/tm-587-tiya-golf-club
                 </div>
             </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#81B29A" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFBD25" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
         </footer>
 
 

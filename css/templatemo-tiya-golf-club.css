@@ -491,8 +491,8 @@ strong {
 
 .navbar-expand-lg .navbar-nav .nav-link {
   border-radius: var(--border-radius-large);
-  margin: 10px;
-  padding: 10px;
+   margin: 4px;
+    padding: 8px 5px;
 }
 
 .navbar-nav .nav-link {
@@ -647,17 +647,18 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-    background: linear-gradient(135deg, #C9B5A3, #8B6B56);
+    background-image: url('../images/anna-rosar-ZxFyVBHMK-c-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
 
-    padding-top: 180px;
-    padding-bottom: 100px;
+    height: 900px;
+    min-height: 900px;
 
-    height: 100vh;
-    min-height: 750px;
+    padding-top: 0;
+    padding-bottom: 0;
+
     margin-bottom: -90px;
 }
 
@@ -1297,5 +1298,305 @@ strong {
     transform: translateY(40px);
     z-index: 2;
 }
+
+.hero-section .custom-btn-group {
+    position: relative;
+    top: -20px;
+}
+
+
+/* COMPACT SUNNY CALENDAR */
+
+.sunny-calendar {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 2px;
+}
+
+.sunny-calendar thead th {
+    padding: 10px 4px;
+    font-size: 14px;
+}
+
+.sunny-calendar tbody td {
+    height: 55px;
+    padding: 6px 3px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.sunny-calendar td i {
+    display: block;
+    margin-top: 3px;
+    font-size: 18px;
+}
+
+/* GREEN TICK - NYITVA */
+.sunny-calendar .bi-check-circle-fill {
+    color: #28a745;
+}
+
+/* RED CROSS - ZÁRVA */
+.sunny-calendar .bi-x-circle-fill {
+    color: #dc3545;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .sunny-calendar thead th {
+        padding: 6px 1px;
+        font-size: 10px;
+    }
+
+    .sunny-calendar tbody td {
+        height: 42px;
+        padding: 4px 1px;
+        font-size: 12px;
+    }
+
+    .sunny-calendar td i {
+        font-size: 15px;
+        margin-top: 2px;
+    }
+}
+
+
+/* INTRODUCTION AND VIDEO POSITION */
+
+.hero-section > .container {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    padding-top: 90px;
+    padding-bottom: 100px;
+
+    transform: none;
+    box-sizing: border-box;
+}
+
+.hero-section > .container > .row {
+    width: 100%;
+    align-items: center;
+}
+
+
+/* Prevent video from exceeding its column */
+
+.hero-section iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
+}
+
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .hero-section {
+        height: 850;
+        min-height: 850px;
+        padding-top: 180px;
+        padding-bottom: 170px;
+    }
+
+    .hero-section > .container {
+        height: auto;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: auto;
+        min-height: 0;
+        padding-top: 160px;
+        padding-bottom: 130px;
+    }
+}
+.hero-section > svg {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+}
+
+.hero-section > .container + svg {
+    top: auto;
+    bottom: -1px;
+}
+
+
+/* NAVBAR SHRINKS WHEN SCROLLING */
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: padding 0.3s ease;
+}
+
+/* When scrolling down */
+
+.sticky-wrapper.is-sticky .navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #603A20;
+}
+
+
+/* LOGO SHRINKS WHEN SCROLLING */
+
+.navbar .navbar-brand img {
+    max-height: 130px;
+    width: auto;
+    transition: max-height 0.3s ease;
+}
+
+.sticky-wrapper.is-sticky .navbar .navbar-brand img {
+    max-height: 65px;
+}
+
+
+/* SUNNY FACEBOOK CARD */
+
+.sunny-facebook-section {
+    background-color: #FFF8ED;
+    padding: 80px 20px;
+}
+
+.sunny-facebook-section h2 {
+    color: #603A20;
+}
+
+.sunny-facebook-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(96, 58, 32, 0.12);
+}
+
+.sunny-facebook-card-header {
+    background: #603A20;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.sunny-facebook-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.sunny-facebook-card-header h3 {
+    color: #FFBD25;
+    margin-bottom: 5px;
+}
+
+.sunny-facebook-card-header p {
+    color: #FFF8ED;
+    font-size: 15px;
+    margin: 0;
+}
+
+.sunny-facebook-card-body {
+    padding: 35px 30px;
+    text-align: center;
+}
+
+.sunny-facebook-card-body p {
+    color: #665344;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.sunny-facebook-card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #603A20;
+    color: #FFF8ED;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.sunny-facebook-card-button:hover {
+    background: #FFBD25;
+    color: #603A20;
+}
+
+@media (max-width: 576px) {
+    .sunny-facebook-section {
+        padding: 50px 15px;
+    }
+
+    .sunny-facebook-card-header {
+        padding: 25px 15px;
+    }
+
+    .sunny-facebook-card-body {
+        padding: 25px 18px;
+    }
+
+    .sunny-facebook-card-button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}
+
+/* SUNNY MANCSLAND GOOGLE MAPS */
+
+.sunny-map-section {
+    background-color: #FFF8ED;
+    padding: 70px 20px;
+}
+
+.sunny-map-section h2 {
+    color: #603A20;
+}
+
+.sunny-map-section p {
+    color: #665344;
+}
+
+.sunny-map-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(96, 58, 32, 0.12);
+}
+
+.sunny-map-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+@media (max-width: 576px) {
+    .sunny-map-section {
+        padding: 45px 15px;
+    }
+
+    .sunny-map-container iframe {
+        height: 320px;
+    }
+}
+
+
 
 
