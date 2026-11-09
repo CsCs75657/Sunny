@@ -11,15 +11,15 @@ https://templatemo.com/tm-587-tiya-golf-club
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #81B29A;
-  --secondary-color:              #3D405B;
-  --section-bg-color:             #F4F1DE;
-  --custom-btn-bg-color:          #F2CC8F;
-  --custom-btn-bg-hover-color:    #E07A5F;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --link-hover-color:             #F2CC8F;
+ --white-color:                  #FFF8ED;
+  --primary-color:                #D99516;
+  --secondary-color:              #603A20;
+  --section-bg-color:             #FFF1D6;
+  --custom-btn-bg-color:          #FFBD25;
+  --custom-btn-bg-hover-color:    #E5A000;
+  --dark-color:                   #603A20;
+  --p-color:                      #665344;
+  --link-hover-color:             #FFBD25;
 
   --body-font-family:             'DM Sans', sans-serif;
 
@@ -144,7 +144,10 @@ strong {
 
 .section-overlay {
   content: "";
-  background: rgba(0, 0, 0, 0) linear-gradient(rgba(39, 48, 83, 0.01) 0%, rgb(39, 48, 83) 100%) repeat scroll 0% 0%;
+  background: linear-gradient(
+    rgba(96, 58, 32, 0.05) 0%,
+    rgba(255, 189, 37, 1) 100%
+  );
   position: absolute;
   top: 0;
   right: 0;
@@ -168,12 +171,12 @@ strong {
 }
 
 .cd-words-wrapper b {
-  color: var(--link-hover-color);
-  display: inline-block;
-  position: absolute;
-  white-space: nowrap;
-  left: 0;
-  top: 0;
+    color: #603A20;
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
 }
 
 .cd-words-wrapper b.is-visible {
@@ -360,7 +363,7 @@ strong {
   CUSTOM BUTTON               
 -----------------------------------------*/
 .custom-btn {
-  background: var(--custom-btn-bg-color);
+  background: #805033;
   border: 2px solid transparent;
   border-radius: var(--border-radius-large);
   color: var(--white-color);
@@ -437,15 +440,16 @@ strong {
   left: 0;
 }
 
+
 .sticky-wrapper.is-sticky .navbar {
-  background-color: rgb(61 64 91);
+    background-color: #603A20;
 }
 
 .navbar {
-  background: transparent;
-  z-index: 99;
-  padding-top: 15px;
-  padding-bottom: 15px;
+    background: #603A20;
+    z-index: 99;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .navbar-brand,
@@ -643,16 +647,18 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: url('../images/anna-rosar-ZxFyVBHMK-c-unsplash.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  height: 100vh;
-  min-height: 670px;
-  margin-bottom: -90px;
+    background: linear-gradient(135deg, #C9B5A3, #8B6B56);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    padding-top: 180px;
+    padding-bottom: 100px;
+
+    height: 100vh;
+    min-height: 750px;
+    margin-bottom: -90px;
 }
 
 .hero-50 {
@@ -677,7 +683,7 @@ strong {
 }
 
 .hero-section > svg {
-  top: 0;
+    top: 130px;
 }
 
 .hero-section .container + svg {
@@ -1286,4 +1292,10 @@ strong {
     padding: 4px 12px;
   }
 }
+.hero-section > .container {
+    position: relative;
+    transform: translateY(40px);
+    z-index: 2;
+}
+
 
